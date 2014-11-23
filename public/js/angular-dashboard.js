@@ -98,11 +98,13 @@
 				var d = [];
 				var usage = [];
 				usage.push("Average Water Usage");
+				d.push(['x', 'Friends']);
+
 				for (friend in data) {
 					var friends = [];
 					friends.push(data[friend]._id);
-					friends.push($filter('number')(data[friend].average, 1))
-					d.push(friends)
+					friends.push($filter('number')(data[friend].average, 1));
+					d.push(friends);
 				}
 				$scope.loadData(d);				
 			});
